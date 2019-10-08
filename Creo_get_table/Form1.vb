@@ -11,7 +11,7 @@ Public Class Form1
     Dim model1 As IpfcModel2D
     Dim name1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        On Error GoTo a
+        'On Error GoTo a
         ConnectToCreo()
         Label1.Text = "Drawing Name: " & name1
         Dim mainmodel As IpfcModel
