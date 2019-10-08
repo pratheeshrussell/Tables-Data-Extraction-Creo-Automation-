@@ -21,43 +21,6 @@ Public Class Form1
         Next
         GetTablesList()
 
-        ' GoTo a
-
-        Dim Drawing As IpfcDrawing = CType(model1, IpfcDrawing)
-
-        Dim TotalSheets As Integer
-
-        TotalSheets = Drawing.NumberOfSheets
-
-        Dim modowner As IpfcModelItemOwner = CType(model1, IpfcModelItemOwner)
-        Dim symbol2 As IpfcDetailItems = modowner.ListDetailItems(EpfcDetailType.EpfcDETAIL_NOTE, 2)
-        MsgBox(symbol2.Item(0).Count)
-        Dim p12 = ""
-        For Each notetext As IpfcDetailNoteItem In symbol2
-            '  MsgBox("here")
-            '  Dim mynote As IpfcNote = CType(notetext, IpfcNote)
-            'MsgBox(mynote.GetText(False))
-        Next
-
-        ' For i = 1 To TotalSheets ' Note here i is the required sheet number
-
-        Dim owner As IpfcDetailItemOwner = CType(model1, IpfcDetailItemOwner)
-
-
-        Dim symbol As IpfcDetailItems = owner.ListDetailItems(EpfcDetailType.EpfcDETAIL_NOTE, 2)
-
-
-        DisconnectCreo()
-
-        'MessageBox.Show(symbol.GetInstructions.FullPath)
-
-        ' Next
-
-
-
-        GoTo a
-
-a:
         DisconnectCreo()
 
 
